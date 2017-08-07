@@ -1,0 +1,22 @@
+<h2>
+  {{vehicle.name}}</h2>
+
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#basic" aria-controls="basic" role="tab" data-toggle="tab">Vehicle</a></li>
+    <li role="presentation"><a href="#photos" aria-controls="photos" role="tab" data-toggle="tab">Photos</a></li>
+  </ul>
+  <div class="tab-content" *ngIf="vehicle">
+  <div id="vehicle" class="tab-pane active">
+    <div class="well">
+      <p>{{vehicle.make}}</p>
+
+      <button class="btn btn-priamry" (click)="edit(vehicle.id)">Edit</button>
+      <input type="button" class="btn btn-danger" *ngIf="vehicle.id" value="Delete" (click)="delete()">
+    </div>
+  </div>
+    <div role="tabpanel" class="tab-pane" id="photos">
+    <h2>Photos</h2>
+    <input type="file" (change)="uploadPhoto()" #fileInput/>
+    <img *ngFor="let photo of photos"  src="uploads/{{photo.fileName}}" alt="{{photo.fileName}}" class="img img-thumbnail"/>
+  </div>
+</div>
