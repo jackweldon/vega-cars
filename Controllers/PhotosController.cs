@@ -24,7 +24,8 @@ namespace vega.Controllers
         private readonly PhotoSettings photoSettings;
         private readonly IPhotoService photoService;
 
-        public PhotosController(IHostingEnvironment host, IVehicleRepository vehicleRepository, IPhotoRepository photoRepository, IMapper mapper, IOptionsSnapshot<PhotoSettings> options, IPhotoService photoService)
+        public PhotosController(IHostingEnvironment host, IVehicleRepository vehicleRepository, IPhotoRepository photoRepository, 
+        IMapper mapper, IOptionsSnapshot<PhotoSettings> options, IPhotoService photoService)
         {
             this.photoService = photoService;
             this.photoSettings = options.Value;

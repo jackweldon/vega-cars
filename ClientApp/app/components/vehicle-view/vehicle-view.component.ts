@@ -32,6 +32,7 @@ export class VehicleViewComponent {
       }
     });
   }
+  
 
   uploadPhoto() {
     var nativeElement: HTMLInputElement = this.fileInput.nativeElement;
@@ -48,6 +49,7 @@ export class VehicleViewComponent {
     }
   }
 
+  
   ngOnInit() {
     this.photoService.getPhotos(this.vehicleId).subscribe(photos => this.photos = photos);
 
