@@ -48,7 +48,6 @@ export class VehicleViewComponent {
       })
     }
   }
-
   
   ngOnInit() {
     this.photoService.getPhotos(this.vehicleId).subscribe(photos => this.photos = photos);
