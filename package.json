@@ -49,6 +49,11 @@
     "zone.js": "0.8.10"
   },
   "devDependencies": {
-    "@angular/cli": "^1.2.7"
+    "@angular/cli": "^1.2.7",
+    "install": "^0.10.1",
+    "node-sass": "^4.5.3",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^6.0.6",
+    "webpack": "^2.5.1"
   }
 }
